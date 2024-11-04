@@ -9,7 +9,7 @@ class UsuarioService:
         try:
             usuario = Usuario(nome=nome,email=email,senha=senha)
 
-            consultar_usuario = self.repository.listar_todos_usuarios(usuario.email)
+            consultar_usuario = self.repository.pesquisar_usuario(usuario.email)
 
             if consultar_usuario:
                 print("Usuario ja existe")
@@ -20,6 +20,9 @@ class UsuarioService:
         except TypeError as erro:
             print("Erro ao salvar usuario:{erro}")            
         except Exception as erro:
-            print("Ocorreu um erro inesperado:{erro}")            
-    def listar_todos_usuarios(self):
-        return self.repository.listar_todos_usuarios()
+            print("Ocorreu um erro inesperado:{erro}")        
+
+def listar_todos_usuarios(self):
+    
+       
+    
