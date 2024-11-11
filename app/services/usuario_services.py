@@ -23,6 +23,6 @@ class UsuarioService:
             print("Ocorreu um erro inesperado:{erro}")        
 
 def listar_todos_usuarios(self):
-    
+    return self.repository.listar_usuarios()  
        
     
